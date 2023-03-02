@@ -68,7 +68,7 @@ app.post("/update/:id", async (req, res) => {
     try {
         const data = { title: req.body.title, author: req.body.author };
         await axios.put(base_url + '/books/' + req.params.id, data);
-        res.redirect ("//");
+        res.redirect ("/");
     } catch (err) {
         console.error(err);
         res.status(500).send('Error');
